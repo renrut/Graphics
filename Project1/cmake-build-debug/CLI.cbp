@@ -8,47 +8,47 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/turner/Documents/Graphics/Project1/cmake-build-debug"/>
+				<Option working_dir="/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/turner/Documents/Graphics/Project1/cmake-build-debug"/>
+				<Option working_dir="/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/turner/Documents/Graphics/Project1/cmake-build-debug"/>
+				<Option working_dir="/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CLI">
-				<Option working_dir="/home/turner/Documents/Graphics/Project1/cmake-build-debug"/>
+				<Option working_dir="/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CLI"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/turner/Documents/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 CLI"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/turner/Documents/Graphics/Project1/CMakeLists.txt">
+		<Unit filename="/Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

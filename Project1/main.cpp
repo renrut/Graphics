@@ -192,7 +192,6 @@ void
 main_loop(char line[])
 {
    /* PUT YOUR CLI CODE HERE! */
-  
    if (line == NULL)
    {
       printf("Exiting...\n");

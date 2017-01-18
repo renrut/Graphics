@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/bin/clion-2016.3.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /usr/bin/clion-2016.3.2/bin/cmake/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/turner/Documents/Graphics/Project1
+CMAKE_SOURCE_DIR = /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/turner/Documents/Graphics/Project1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug
 
 # Utility rule file for CLI.
 
@@ -71,6 +71,6 @@ CMakeFiles/CLI.dir/clean:
 .PHONY : CMakeFiles/CLI.dir/clean
 
 CMakeFiles/CLI.dir/depend:
-	cd /home/turner/Documents/Graphics/Project1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/turner/Documents/Graphics/Project1 /home/turner/Documents/Graphics/Project1 /home/turner/Documents/Graphics/Project1/cmake-build-debug /home/turner/Documents/Graphics/Project1/cmake-build-debug /home/turner/Documents/Graphics/Project1/cmake-build-debug/CMakeFiles/CLI.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1 /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1 /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug /Users/turnerstrayhorn/Turner/School/Graphics/Graphics/Project1/cmake-build-debug/CMakeFiles/CLI.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CLI.dir/depend
 

@@ -7,6 +7,15 @@
 
 
 class Dispatcher {
+    public:
+        //runs the command
+        void runCommand(std::string);
+
+    private:
+        //returns command string
+        std::string parseCommand(std::string);
+
+
 
 };
 
