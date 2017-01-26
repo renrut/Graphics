@@ -201,14 +201,12 @@ main_loop(char line[])
       exit(0);
    }
    else{
-       std::cout<<"Running command"<<std::endl;
        d->runCommand(command);
    }
     //  printf("RESULT: %s\n",line);
      
    printf("CLI> ");
    fflush(stdout);
-   delete d;
    return;
 }
 

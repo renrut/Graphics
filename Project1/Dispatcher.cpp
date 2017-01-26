@@ -7,19 +7,7 @@
 
 Dispatcher* Dispatcher::dispatcher = nullptr;
 
-Dispatcher::Dispatcher(){
-    drawModule = new DrawModule();
-    moveModule = new MoveModule();
-    colorModule = new ColorModule();
-    readModule = new ReadModule();
-}
 
-Dispatcher::~Dispatcher(){
-    delete drawModule;
-    delete moveModule;
-    delete colorModule;
-    delete readModule;
-}
 
 Dispatcher* Dispatcher::getReference(){
     if(!dispatcher) {
@@ -35,13 +23,25 @@ void Dispatcher::runCommand(std::string input){
     std::transform(command.begin(), command.end(), command.begin(), ::tolower);
 
     if(command.compare("move") == 0){
+        moveModule = new MoveModule();
         moveModule->doCommand(splitCommand);
+        delete moveModule;
+        moveModule = nullptr;
     }else if(command.compare("draw") == 0){
+        drawModule = new DrawModule();
         drawModule->doCommand(splitCommand);
+        delete drawModule;
+        drawModule = nullptr;
     }else if(command.compare("color") == 0){
+        colorModule = new ColorModule();
         colorModule->doCommand(splitCommand);
+        delete colorModule;
+        colorModule = nullptr;
     }else if(command.compare("read") == 0){
+        readModule = new ReadModule();
         readModule->doCommand(splitCommand);
+        delete readModule;
+        readModule = nullptr;
     }else{
         std::cout<<"Invalid Command"<<std::endl;
     }

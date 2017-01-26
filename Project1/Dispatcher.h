@@ -19,8 +19,6 @@ class ReadModule;
 
 class Dispatcher {
     public:
-        Dispatcher();
-        ~Dispatcher();
         //runs the command
         static Dispatcher* getReference();
         void runCommand(std::string input);
