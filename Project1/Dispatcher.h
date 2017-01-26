@@ -5,17 +5,34 @@
 #ifndef CLI_DISPATCHER_H
 #define CLI_DISPATCHER_H
 
+#include <string>
+#include <vector>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include "MoveModule.h"
+#include "DrawModule.h"
+#include "ColorModule.h"
+#include "ReadModule.h"
+
+class ReadModule;
 
 class Dispatcher {
     public:
+        Dispatcher();
+        ~Dispatcher();
         //runs the command
-        void runCommand(std::string);
+        static Dispatcher* getReference();
+        void runCommand(std::string input);
 
     private:
         //returns command string
-        std::string parseCommand(std::string);
-
-
+        static Dispatcher* dispatcher;
+        std::vector<std::string> parseCommand(std::string input);
+        DrawModule* drawModule;
+        MoveModule* moveModule;
+        ColorModule* colorModule;
+        ReadModule* readModule;
 
 };
 

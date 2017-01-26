@@ -19,7 +19,8 @@
 #include <GL/glut.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include "Dispatcher.h"
+#include <iostream>
 /*	Create checkerboard image	*/
 #define	checkImageWidth 1024
 #define	checkImageHeight 1024
@@ -192,17 +193,22 @@ void
 main_loop(char line[])
 {
    /* PUT YOUR CLI CODE HERE! */
+   std::string command(line);
+   Dispatcher* d = Dispatcher::getReference();
    if (line == NULL)
    {
       printf("Exiting...\n");
       exit(0);
    }
-   else
-      printf("RESULT: %s\n",line);
+   else{
+       std::cout<<"Running command"<<std::endl;
+       d->runCommand(command);
+   }
+    //  printf("RESULT: %s\n",line);
      
    printf("CLI> ");
    fflush(stdout);
-
+   delete d;
    return;
 }
 
