@@ -1,0 +1,3 @@
+/home/turner/Documents/Graphics/Project1/cmake-build-default/CMakeFiles/edit_cache.dir
+/home/turner/Documents/Graphics/Project1/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/home/turner/Documents/Graphics/Project1/cmake-build-default/CMakeFiles/CLI.dir
