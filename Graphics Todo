@@ -1,0 +1,59 @@
+Todo:
+Comments on commands
+
+TiffRead
+	parameter - Fn - Filename
+	
+	-The TiffRead command simply takes a tiff file with filename fn and displays it in a window. Use the checkimage
+		array in the supplied main.c to do this. You are not expected to be able to read in all tiff files, see below
+
+	-implement the specification for: 8-bit grayscale uncompressed, and 24-bit RGB uncompressed.
+
+TiffWrite
+	parameter - Fn - Filename
+	parameter - x0, y0, xc, yc - bounding box coords (unsigned ints (size_t))
+
+	-implement the specification for: 8-bit grayscale uncompressed, and 24-bit RGB uncompressed.
+
+	-The TiffWrite command writes a tiff file with file name fn and fills it with pixels formed by the box (x0, y0, xc, yc)
+		of the last image read in by TiffRead.
+
+	-The box is specified by the pixel coordinates of the lower left hand vertex (the origin) and the upper right hand vertex (the corner) of the box. 
+
+	-Note that TiffWrite can only work after TiffRead has been called as the file type of what is written must be same as what was read. 
+		-Check for null vars?
+	-If you read in an 8 bit grayscale image, you must write an 8 bit grayscale image.
+
+TiffStat - WRITE FIRST
+	parameter - Fn - Filename
+
+	- If the file is not a Tiff File, it informs you
+	
+	-OTHERWISE (it is a tiff -> ALL TIFFS)-
+	- Prints out the tiff tag entries and values of the file Fn.
+	-Does NOT print out colormap or image.
+	- if the values are stored in the offset. You should parse the values if it is reasonable to do
+		so, e.g., SamplesPerPixel. For other values where it is not reasonably to print out the values, such as a private tag, then
+		you can simply print out the offset.
+
+Other Info:
+- When testing, test with small images. You are not required to support an image greater than 1024x1024 if you don’t
+want to (but your program should gracefully decline to handle a larger image). (0,0) for OpenGL (and Direct3D) is in
+the lower left hand corner of the window.
+
+- you can ignore any optional fields that were associated with the file that you read in
+
+- you are not required to handle more than one IFD per file, although the Tiff specification requires that the IFD contain the address of the “next IFD” as its last 4 bytes. You can make this a long zero.
+
+- The format of TIFF image data is described on pages 37 and 38 of the TIFF spec, under PhotometricInterpretation
+and PlanarConfiguration. Note that a baseline TIFF reader only has to support PlanarConfiguration=1. If SamplesPerPixel
+is greater than three, you can throw away the extra bytes or you can generate a diagnostic message and do
+nothing.
+
+-Check .tifstat file against image
+
+Testing
+• TiffStat all the images.
+• TiffRead all the images which are 8-bit grayscale uncompressed and 24-bit RGB uncompressed.
+• TiffWrite an image of your own choosing.
+• TiffRead your own written images.
