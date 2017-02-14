@@ -14,6 +14,7 @@
 #include "DrawModule.h"
 #include "ColorModule.h"
 #include "ReadModule.h"
+#include "TiffStat.h"
 
 class ReadModule;
 
@@ -31,6 +32,7 @@ class Dispatcher {
         MoveModule* moveModule;
         ColorModule* colorModule;
         ReadModule* readModule;
+        TiffStat* tiffStat;
 
 };
 

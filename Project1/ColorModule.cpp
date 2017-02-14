@@ -8,7 +8,9 @@
 bool ColorModule::parseParams(std::vector<std::string> params){
     if(params.size() > 1){
         try {
-            x = std::stof(params[1]);
+            size_t idx = 0;
+            x = std::stof(params[1], &idx);
+            std::cout<<idx<<std::endl;
         }catch (std::invalid_argument){
             std::cout<< "Invalid Parameter."<<std::endl;
             return false;
@@ -40,6 +42,8 @@ void ColorModule::doCommand(std::vector<std::string> command){
     if(parseParams(command)){
         std::cout<<"Color "<<x<<","<<y<<","<<z<<std::endl;
     }else{
+        std::cout<<"Color "<<x<<","<<y<<","<<z<<" - ";
+
         std::cout<<"Please enter up to 3 numeral coordinates."<<std::endl;
     }
 }

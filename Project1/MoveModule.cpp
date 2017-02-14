@@ -3,6 +3,7 @@
 //
 
 #include "MoveModule.h"
+#include <iterator>
 
 //parses any parameters. Decides if can run.
 bool MoveModule::parseParams(std::vector<std::string> params){
@@ -25,7 +26,7 @@ bool MoveModule::parseParams(std::vector<std::string> params){
     }
     if(params.size() > 3){
         try {
-            z = std::stof(params[2]);
+            z = std::stof(params[3]);
         }catch (std::invalid_argument){
             std::cout<< "Invalid Parameter."<<std::endl;
             return false;

@@ -28,6 +28,7 @@ void ReadModule::doCommand(std::vector<std::string> command){
         }
 
     }else{
+        std::cout<<"Reading from " << fileName << std::endl;
         std::cout<<"Too many Parameters. Cannot run."<<std::endl;
     }
 }

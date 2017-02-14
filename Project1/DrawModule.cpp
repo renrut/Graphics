@@ -39,6 +39,7 @@ void DrawModule::doCommand(std::vector<std::string> command){
     if(parseParams(command)){
         std::cout<<"Draw "<<x<<","<<y<<","<<z<<std::endl;
     }else{
+        std::cout<<"Draw "<<x<<","<<y<<","<<z<<" - ";
         std::cout<< "Please enter up to 3 numeral coordinates."<<std::endl;
     }
 }
