@@ -16,7 +16,7 @@ using namespace std;
 
 
 
-//pulls filename from the command
+//Pulls filename from the command
 bool TiffRead::parseParams(vector<string> params){
     if(params.size() > 1){
         try {
@@ -43,7 +43,7 @@ void TiffRead::doCommand(vector<string> command){
             makeCheckImage();
             readFile();
         }else{
-            cout<<"Please run 'tiffstat "<< filename << "' before running tiffread"<<endl;
+            supported = false;
             return;
         }
     }
@@ -87,6 +87,7 @@ bool TiffRead::getDimensions(){
     }
     if(columns > checkImageWidth || rows > checkImageHeight){
         cout<<"Image is too large to display. Must be "<<checkImageHeight<<"x"<<checkImageWidth<<endl;
+        return false;
     }
     return (columns < checkImageWidth && rows < checkImageHeight);
 }
@@ -114,6 +115,7 @@ void TiffRead::loadArray(){
                     G = B = R;
                 }
                 //height to place pixel
+                //number of rows - ((strip# * rows per strip) + rowNum in strip + 1
                 size_t hp = rows - ((i*rps)+r + 1);
 
                 checkImage[hp][c][0] = R;
@@ -125,18 +127,21 @@ void TiffRead::loadArray(){
     }
 }
 
-//reads
+//reads file
 void TiffRead::readFile(){
     if(!checkSupport()){
+        supported = false;
         cout<<"Cannot use Tiffread on this image."<<endl;
         return;
     }
     if(!getDimensions()){
+        supported = false;
         cout<<"Image not Supported"<<endl;
         return;
     }
 
     loadArray();
     display();
+    supported = true;
     return;
 }

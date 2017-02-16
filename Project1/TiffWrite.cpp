@@ -46,6 +46,10 @@ bool TiffWrite::parseParams(vector<string> params){
 void TiffWrite::doCommand(vector<string> command){
     if(parseParams(command)){
         tiffRead = Dispatcher::getReference()->tiffRead;
+        if(!(tiffRead->supported)){
+            cout<<"Tiff Was not TiffRead in properly and, thus cannot be written."<<endl;
+            return;
+        }
         tiffStat = tiffRead->tiffStat;
         ofstream imfile;
         imfile.open(filename, ios::binary);

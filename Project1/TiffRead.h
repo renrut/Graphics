@@ -31,7 +31,7 @@ public:
     string filename;
     TiffStat* tiffStat;
     unsigned long pi;
-
+    bool supported;
 
 private:
     //methods

@@ -10,6 +10,8 @@
 #include <sstream>
 #include <iostream>
 #include <algorithm>
+#include <regex>
+
 #include "MoveModule.h"
 #include "DrawModule.h"
 #include "ColorModule.h"

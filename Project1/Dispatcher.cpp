@@ -68,13 +68,18 @@ void Dispatcher::runCommand(std::string input){
     }
 }
 
+/*
+ * Parses command string into a vector of strings
+ */
 std::vector<std::string> Dispatcher::parseCommand(std::string input){
     std::vector<std::string> command;
-    //add space to end for split
-    std::istringstream f(input + " ");
-    std::string s;
-    while (getline(f, s, ' ')) {
-        command.push_back(s);
+    std::regex rgx("\\s*(,|\\s)\\s*");
+    std::sregex_token_iterator iter(input.begin(), input.end(), rgx, -1);
+    std::sregex_token_iterator end;
+    for ( ; iter != end; ++iter){
+        command.push_back(*iter);
     }
+
     return command;
 }
+
