@@ -193,15 +193,20 @@ void
 main_loop(char line[])
 {
    /* PUT YOUR CLI CODE HERE! */
-   std::string command(line);
-   Dispatcher* d = Dispatcher::getReference();
-   if (line == NULL)
-   {
-      printf("Exiting...\n");
-      exit(0);
-   }
-   else{
-       d->runCommand(command);
+   try {
+      std::string command(line);
+      Dispatcher* d = Dispatcher::getReference();
+      if (line == NULL)
+      {
+         printf("Exiting...\n");
+         exit(0);
+      }
+      else{
+         d->runCommand(command);
+      }
+
+   }catch(int e){
+      std::cout<<"Error parsing line. Line may be too long."<<std::endl;
    }
     //  printf("RESULT: %s\n",line);
      

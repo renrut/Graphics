@@ -15,14 +15,20 @@
 #include "ColorModule.h"
 #include "ReadModule.h"
 #include "TiffStat.h"
+#include "TiffRead.h"
+#include "TiffWrite.h"
 
 class ReadModule;
+class TiffRead;
+class TiffWrite;
 
 class Dispatcher {
     public:
         //runs the command
         static Dispatcher* getReference();
         void runCommand(std::string input);
+        TiffStat* tiffStat;
+        TiffRead* tiffRead;
 
     private:
         //returns command string
@@ -32,8 +38,7 @@ class Dispatcher {
         MoveModule* moveModule;
         ColorModule* colorModule;
         ReadModule* readModule;
-        TiffStat* tiffStat;
-
+        TiffWrite* tiffWrite;
 };
 
 

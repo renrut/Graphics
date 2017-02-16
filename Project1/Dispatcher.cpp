@@ -18,6 +18,7 @@ Dispatcher* Dispatcher::getReference(){
 
 void Dispatcher::runCommand(std::string input){
     if(input != "") {
+
         std::vector <std::string> splitCommand = parseCommand(input);
         std::string command = splitCommand[0];
         //to lower
@@ -46,6 +47,21 @@ void Dispatcher::runCommand(std::string input){
         }else if (command.compare("tiffstat") == 0) {
             tiffStat = new TiffStat();
             tiffStat->doCommand(splitCommand);
+        }else if (command.compare("tiffread") == 0) {
+            if(tiffStat == nullptr){
+                tiffStat = new TiffStat();
+            }
+            tiffStat->doCommand(splitCommand);
+            tiffRead = new TiffRead();
+            tiffRead->doCommand(splitCommand);
+
+        }else if (command.compare("tiffwrite") == 0) {
+            if(tiffRead == nullptr){
+                cout<<"Please Run Tiffread on the Image First"<<endl;
+            }else{
+                tiffWrite = new TiffWrite();
+                tiffWrite->doCommand(splitCommand);
+            }
         } else {
             std::cout << "Invalid Command" << std::endl;
         }
@@ -54,7 +70,8 @@ void Dispatcher::runCommand(std::string input){
 
 std::vector<std::string> Dispatcher::parseCommand(std::string input){
     std::vector<std::string> command;
-    std::istringstream f(input);
+    //add space to end for split
+    std::istringstream f(input + " ");
     std::string s;
     while (getline(f, s, ' ')) {
         command.push_back(s);

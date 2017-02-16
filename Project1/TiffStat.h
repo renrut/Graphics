@@ -11,8 +11,10 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
-#include "Module.h"
 #include <map>
+#include <cstring>
+
+#include "Module.h"
 
 using namespace std;
 
@@ -21,29 +23,39 @@ struct TiffTag {
     //read ifd tags
     short tag; //2 byte
     short fieldType;
-    unsigned long typeCount;
-    unsigned long valueOffset;
+    uint typeCount;
+    uint valueOffset;
     vector<long> values;
 };
 
 class TiffStat: public Module {
 public:
-    bool parseParams(vector<string> parameters);
+    //methods
     void doCommand(vector<string>);
+    bool parseParams(vector<string> parameters);
+    //vars
+    map<short, TiffTag*> tags;
+    string filename;
+
+private:
+    //methods
     void handleFile();
     void SwapShortBytes(unsigned short int * twobytes);
     void printTag(TiffTag *tag);
     TiffTag* readTag(ifstream *imfile);
     bool isOffset(short type, unsigned long count);
     void getTagValues(TiffTag* t, ifstream* imfile);
+    void SwapFourBytes(unsigned int * fourbytes);
 
-
-private:
-    string filename;
+    //vars
+    bool bigendian;
     char* buffer;
     int typesize[6] = {0,1,1,2,4,8};
-    map<short ,string> tagMap = {
-            {254,"NewSubfileType"},
+    map<short, string> fieldTypeMap = {
+            {1, "BYTE"}, {2, "ASCII"}, {3,"SHORT"}, {4, "LONG"}, {5, "RATIONAL"}
+    };
+    map<short, string> tagMap = {
+            {254,"SubfileType"},
             {255,"SubfileType"},
             {256,"ImageWidth"},
             {257,"ImageLength"},

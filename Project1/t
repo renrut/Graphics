@@ -1,0 +1,3 @@
+tiffread eeyore.tif
+tiffwrite po.tif 0 0 100 100
+tiffread po.tif
